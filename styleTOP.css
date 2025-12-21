@@ -9,12 +9,144 @@ html{
 body{
     font-family:"M PLUS 1","Zen Kaku Gothic New", sans-serif;
     font-style: normal;
-    background-color: #FFF;
-    color: #4F3636;
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+
+    color: #000;
+    background: #fff;
+
+    /* 方眼紙模様に必須のスタイル */
+    background-image: linear-gradient(0deg, transparent calc(100% - 1px), #84d0f3 calc(100% - 1px)),
+    linear-gradient(90deg, transparent calc(100% - 1px), #84d0f3 calc(100% - 1px));
+    background-size: 30px 30px;
+    background-repeat: repeat;
+    background-position: center center;
+}
+/*文字位置用*/
+.textCenter{
+    text-align: center;
+}
+.textLeft{
+    text-align: left;
+}
+.textRight{
+    text-align: right;
+}
+/*文字の太さ用*/
+.textRegular{
+    font-weight: 400;
 }
 
+/*共通*/
+h2{
+    font-size: 32px;
+}
 
+img{
+    display: block;
+}
 
+/*右側部分*/
+header{
+    order: 3;
+    width: 30vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+
+    z-index: 9999;
+}
+.menu-wrap{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.menu{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    transform: rotate(10deg);
+}
+.menu a img:not(.char2, .char-stand){
+    z-index: 10;
+    width: 22vw;
+}
+.menu::before{
+    content: "";
+    position: absolute;
+    width: 7%;
+    height: 180%;
+    background: #d9d9d9;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;             /* 看板の裏に */
+    border-radius: 4px 4px 10px 10px;
+}
+/*看板上のよくなるくん*/
+.char-body{
+    position: absolute;
+    width: 45%;            /* 看板幅基準 */
+    top: -28%;             /* 看板高さ基準 */
+    left: 20%;
+    transform: translateX(-50%);
+    z-index: -2;           /* 看板の後ろ */
+    pointer-events: none;
+}
+.char-arm{
+    position: absolute;
+    width: 11%;
+    top: -9%;
+    left: 35.5%;
+    transform: translateX(-50%);
+    z-index: 5;            /* 看板より前 */
+    pointer-events: none;
+}
+/*看板下のよくなるくんと台*/
+.puzzle-wrap{
+    position: relative;
+    width: 100%;
+}
+.menu-board{
+    width: 100%;
+    display: block;
+}
+.char2{
+    position: absolute;
+    width: 45.6%;
+    left: 50%;
+    bottom: -93%;
+    transform: translateX(0.4%) translateY(-0.4%) rotate(-9.5deg);
+    z-index: 3;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+.menu-item-last .char2{
+    transform: translateX(3%) translateY(3%) rotate(-9deg);
+}
+
+.menu-item-last:hover .char2{
+    transform: translateX(0.4%) translateY(-0.4%) rotate(-9.5deg);    
+}
+.char-stand{
+    position: absolute;
+    width: 30%;          /* 看板基準でサイズ調整 */
+    left: 65%;
+    bottom: -176%;        /* キャラの足元に合わせる */
+
+    transform: rotate(-9deg);
+
+    z-index: 2;          /* キャラより後ろ */
+    pointer-events: none;
+}
+
+/*headerここまで*/
 
 
 
