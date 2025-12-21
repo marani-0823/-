@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*共通部分*/
+
+html{
+    font-size: 100%;/*ユーザーの設定した文字サイズを反映*/
+}
+
+body{
+    font-family:"M PLUS 1","Zen Kaku Gothic New", sans-serif;
+    font-style: normal;
+    background-color: #FFF;
+    color: #4F3636;
+}
+
+
+
+
+
+
+/* レスポンシブデザイン */
+@media (max-width: /**/px) {
+  
+}
