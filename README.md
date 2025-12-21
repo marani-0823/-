@@ -3,3 +3,4 @@ git --version
 ＃てすと
 ＃テスト
 #test
+#dekita
