@@ -4,3 +4,4 @@ git --version
 ＃テスト
 #test
 #dekita
+#よかった
