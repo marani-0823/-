@@ -4,9 +4,11 @@
 
 html{
     font-size: 100%;/*ユーザーの設定した文字サイズを反映*/
+    
 }
 
 body{
+    
     font-family:"M PLUS 1","Zen Kaku Gothic New", sans-serif;
     font-style: normal;
     display: flex;
@@ -15,33 +17,15 @@ body{
 
     color: #000;
     background: #fff;
-
+    overflow: hidden;
     /* 方眼紙模様に必須のスタイル */
-    background-image: linear-gradient(0deg, transparent calc(100% - 1px), #84d0f3 calc(100% - 1px)),
-    linear-gradient(90deg, transparent calc(100% - 1px), #84d0f3 calc(100% - 1px));
-    background-size: 30px 30px;
+    background-image: linear-gradient(0deg, transparent calc(100% - 1px), #a7def7 calc(100% - 1px)),
+    linear-gradient(90deg, transparent calc(100% - 1px), #a7def7 calc(100% - 1px));
+    background-size: 35px 35px;
     background-repeat: repeat;
     background-position: center center;
 }
-/*文字位置用*/
-.textCenter{
-    text-align: center;
-}
-.textLeft{
-    text-align: left;
-}
-.textRight{
-    text-align: right;
-}
-/*文字の太さ用*/
-.textRegular{
-    font-weight: 400;
-}
 
-/*共通*/
-h2{
-    font-size: 32px;
-}
 
 img{
     display: block;
@@ -51,14 +35,107 @@ img{
 .global-oval{
     position: fixed;
     left: 50%;
-    bottom: -35vh;
-    width: 140vw;
+    bottom: -33vh;
+    width: 120vw;
     height: 70vh;
     background: #61b0a4;
     border-radius: 50%;
     transform: translateX(-50%);
     pointer-events: none;
     z-index: 0;
+}
+/*左側部分*/
+.left-area{
+    width: 30vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.left-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.left-wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* 左エリアの基準サイズ */
+    --left-base: min(30vw, 420px);
+}
+
+/*左のパズル装飾　上と下*/
+.left-deco{
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.left-deco::before{
+    content: "";
+    position: absolute;
+    top: -8%;
+    left: 50%;
+    transform: translateX(-48%);
+    width: calc(var(--left-base) * 3.7);
+    aspect-ratio: 4 / 1;
+    background: url(img/pc-left-pazuru01.svg) no-repeat center / contain;
+}
+.left-deco::after{
+    content: "";
+    position: absolute;
+    bottom: -7%;
+    left: 50%;
+    transform: translateX(-61%);
+    width: calc(var(--left-base) * 2.7);
+    aspect-ratio: 4 / 1;
+    background: url(img/pc-left-pazuru02.svg) no-repeat center / contain;
+}
+
+/*左側内容*/
+.left-content{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left-logo{
+  margin-top: clamp(120px, 20vh, 220px);
+  width: clamp(200px, 80%, 320px);
+  pointer-events: none;
+}
+.char1{
+    position: absolute;
+    width: 25%;
+    top: 30%;
+    left: 15%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+.date-img{
+    position: absolute;
+    width: 70%;
+    top: 37%;
+    left: 17%;
+    transform: rotate(-15deg);
+}
+.char2{
+    position: absolute;
+    width: 35%;
+    top: 61%;
+    left: 85%;
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
 /*右側部分*/
@@ -115,7 +192,7 @@ header{
     gap: 20px;
     transform: rotate(10deg);
 }
-.menu a img:not(.char2, .char-stand){
+.menu a img:not(.char4, .char-stand){
     z-index: 10;
     width: 22vw;
 }
@@ -133,7 +210,7 @@ header{
     border-radius: 4px 4px 10px 10px;
 }
 /*看板上のよくなるくん*/
-.char-body{
+.char3-body{
     position: absolute;
     width: 45%;            /* 看板幅基準 */
     top: -28%;             /* 看板高さ基準 */
@@ -142,7 +219,7 @@ header{
     z-index: -2;           /* 看板の後ろ */
     pointer-events: none;
 }
-.char-arm{
+.char3-arm{
     position: absolute;
     width: 11%;
     top: -9%;
@@ -160,7 +237,7 @@ header{
     width: 100%;
     display: block;
 }
-.char2{
+.char4{
     position: absolute;
     width: 45.6%;
     left: 50%;
@@ -170,11 +247,11 @@ header{
     pointer-events: none;
     transition: transform 0.3s ease;
 }
-.menu-item-last .char2{
+.menu-item-last .char4{
     transform: translateX(3%) translateY(3%) rotate(-9deg);
 }
 
-.menu-item-last:hover .char2{
+.menu-item-last:hover .char4{
     transform: translateX(0.4%) translateY(-0.4%) rotate(-9.5deg);    
 }
 .char-stand{
@@ -188,20 +265,52 @@ header{
 }
 /*右側ここまで*/
 
-/*左側部分*/
+/*main*/
+.center{
+  width: 40vw;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+            /* 確認用ダミー */
+            .test-scroll {
+            width: 100%;
+            }
+
+            .test-block {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            }
+
+            /* 見分けやすいように交互に色を変える */
+            .test-block:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.6);
+            }
+            .test-block:nth-child(even) {
+            background: rgba(0, 0, 0, 0.05);
+            }
 
 /* レスポンシブデザイン */
 /*タブレット*/
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
     header {
         display: none;
     }
-
-    body {
-        justify-content: flex-start;
-    }
     .global-oval{
         display: none;
+    }
+    .center{
+        width: 65vw;
+    }
+    .left-area{
+        width: 35vw;
     }
 }
 /*スマホ*/
