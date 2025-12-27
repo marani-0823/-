@@ -47,6 +47,20 @@ img{
     display: block;
 }
 
+/*緑のグラウンド*/
+.global-oval{
+    position: fixed;
+    left: 50%;
+    bottom: -35vh;
+    width: 140vw;
+    height: 70vh;
+    background: #61b0a4;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
 /*右側部分*/
 header{
     order: 3;
@@ -64,7 +78,35 @@ header{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    /* 右メニューの基準サイズ */
+    --menu-base: min(30vw, 420px);
 }
+
+/*右のパズル装飾 上と下*/
+.menu-wrap::before{
+    content: "";
+    position: absolute;
+    top: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(var(--menu-base) * 3.7);
+    aspect-ratio: 4 / 1;
+    background: url(img/pc-right-pazuru01.svg) no-repeat center / contain;
+}
+.menu-wrap::after{
+    content: "";
+    position: absolute;
+    bottom: -6%;
+    left: 50%;
+    transform: translateX(-35%);
+
+    width: calc(var(--menu-base) * 2.0);
+    aspect-ratio: 4 / 1;
+    background: url(img/pc-right-pazuru02.svg) no-repeat center / contain;
+}
+
+/*メニュー部分*/
 .menu{
     position: relative;
     display: flex;
@@ -77,6 +119,7 @@ header{
     z-index: 10;
     width: 22vw;
 }
+/*看板の棒*/
 .menu::before{
     content: "";
     position: absolute;
@@ -136,21 +179,39 @@ header{
 }
 .char-stand{
     position: absolute;
-    width: 30%;          /* 看板基準でサイズ調整 */
+    width: 30%;
     left: 65%;
-    bottom: -176%;        /* キャラの足元に合わせる */
-
+    bottom: -176%;
     transform: rotate(-9deg);
-
-    z-index: 2;          /* キャラより後ろ */
+    z-index: 2;
     pointer-events: none;
 }
+/*右側ここまで*/
 
-/*headerここまで*/
-
-
+/*左側部分*/
 
 /* レスポンシブデザイン */
-@media (max-width: /**/px) {
-  
+/*タブレット*/
+@media (max-width: 1024px) {
+    header {
+        display: none;
+    }
+
+    body {
+        justify-content: flex-start;
+    }
+    .global-oval{
+        display: none;
+    }
+}
+/*スマホ*/
+@media (max-width: 768px) {
+    .left-area {
+        display: none;
+    }
+
+    body {
+        justify-content: center;
+    }
+    
 }
