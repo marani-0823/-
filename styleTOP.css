@@ -191,7 +191,15 @@ header{
     aspect-ratio: 4 / 1;
     background: url(img/pc-right-pazuru02.svg) no-repeat center / contain;
 }
-
+.char5{
+    position: absolute;
+    width: 30%;
+    top: -2%;
+    left: 98%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: -1;
+}
 /*メニュー部分*/
 .menu{
     position: relative;
