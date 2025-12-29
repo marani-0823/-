@@ -337,9 +337,11 @@ header{
     .left-area {
         display: none;
     }
-
     body {
         justify-content: center;
+    }
+    .global-oval{
+        display: none;
     }
     .center{
         width: 100vw;
