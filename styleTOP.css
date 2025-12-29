@@ -17,7 +17,13 @@ body{
 
     color: #000;
     background: #fff;
-    overflow: hidden;
+    
+    
+}
+.bg-grid{
+    position: fixed;
+    inset: 0;
+    z-index: -2; 
     /* 方眼紙模様に必須のスタイル */
     background-image: linear-gradient(0deg, transparent calc(100% - 1px), #a7def7 calc(100% - 1px)),
     linear-gradient(90deg, transparent calc(100% - 1px), #a7def7 calc(100% - 1px));
@@ -25,7 +31,6 @@ body{
     background-repeat: repeat;
     background-position: center center;
 }
-
 
 img{
     display: block;
@@ -44,8 +49,10 @@ img{
     pointer-events: none;
     z-index: 0;
 }
+
 /*左側部分*/
 .left-area{
+    order: 1;
     width: 30vw;
     height: 100vh;
     position: sticky;
@@ -137,6 +144,8 @@ img{
     transform: translateX(-50%);
     pointer-events: none;
 }
+/* 左側ここまで */
+
 
 /*右側部分*/
 header{
@@ -267,10 +276,9 @@ header{
 
 /*main*/
 .center{
-  width: 40vw;
-  height: 100vh;
-  overflow-y: auto;
-  z-index: 1;
+    order: 2;
+    width: 40vw;
+    z-index: 1;
 }
 
             /* 確認用ダミー */
@@ -304,7 +312,18 @@ header{
         display: none;
     }
     .global-oval{
-        display: none;
+        bottom: -25vh;
+        transform: translateX(-50%);
+    }
+    .left-deco::after{
+        content: "";
+        position: absolute;
+        bottom: -17%;
+        left: 50%;
+        transform: translateX(-49%);
+        width: calc(var(--left-base) * 6);
+        aspect-ratio: 4 / 1;
+        background: url(img/tablet-pazuru.svg) no-repeat center / contain;
     }
     .center{
         width: 65vw;
