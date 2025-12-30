@@ -312,7 +312,10 @@ header{
             .test-block:nth-child(even) {
             background: rgba(0, 0, 0, 0.05);
             }
-
+.article-img1 {
+    width: 30vw;
+    
+}
 /* レスポンシブデザイン */
 /*タブレット*/
 @media (max-width: 1150px) {
