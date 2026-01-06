@@ -291,7 +291,7 @@ header{
 }
 
             /* 確認用ダミー */
-           /** .test-scroll {
+           * .test-scroll {
             width: 100%;
             }
 
@@ -307,12 +307,12 @@ header{
             }
 
             /* 見分けやすいように交互に色を変える */
-           /** .test-block:nth-child(odd) {
+           .test-block:nth-child(odd) {
             background: rgba(255, 255, 255, 0.6);
             }
             .test-block:nth-child(even) {
             background: rgba(0, 0, 0, 0.05);
-            }**/
+            }
 
 
 article {
