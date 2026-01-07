@@ -291,15 +291,15 @@ header{
 }
 
             /* 確認用ダミー */
-           * .test-scroll {
+           * .center-scroll {
             width: 100%;
             }
 
-            .test-block {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            .center-block {
+                position: relative;
+                min-height: 150vh;
+                overflow: hidden;
+            
 
             font-size: 48px;
             font-weight: bold;
@@ -307,40 +307,68 @@ header{
             }
 
             /* 見分けやすいように交互に色を変える */
-           .test-block:nth-child(odd) {
+           /* .center-block:nth-child(odd) {
             background: rgba(255, 255, 255, 0.6);
             }
-            .test-block:nth-child(even) {
+            .center-block:nth-child(even) {
             background: rgba(0, 0, 0, 0.05);
-            }
+            } */
 
 
 article {
     position: relative;
+    width: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(img/bg-top.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% 60%;
+}
+
+/*topの画像設定*/
+.back-img {
+    width: 100%;
 }
 .article-img1 {
-    width: 35vw;
-    margin-top: 5vh;
+    width: 25vw;
+    margin-top: 4vh;
     position: relative;
     z-index: 1;
 }
+.article-img2 {
+    width: 13vw;
+    margin-top: 17vh;
+}
+.article-img3 {
+    width: 15vw;
+}
+.light {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14vw;
+    max-width: none;
+    z-index: 1;
+    pointer-events: none;
+}
+
 .top {
     position: absolute;
-    top: calc(10vh + 40%);
+    top: calc(15vh + 10%);
     left: 50%;
     transform: translateX(-50%);
 
     display: flex;
-    gap: 2vw;
+    gap: 6vw;
     z-index: 2;
     margin-top: 16vh;
+    background-image: url(img/pc);
 }
-.top img {
-    width: 20vw;
-}
+
 
 
 
