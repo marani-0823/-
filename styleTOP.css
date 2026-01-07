@@ -357,12 +357,12 @@ article {
     .left-deco::after{
         content: "";
         position: absolute;
-        bottom: -17%;
+        bottom: -18%;
         left: 50%;
-        transform: translateX(-49%);
+        transform: translateX(-52%);
         width: calc(var(--left-base) * 6);
         aspect-ratio: 4 / 1;
-        background: url(img/tablet-pazuru.svg) no-repeat center / contain;
+        background: url(img/tablet-pazuru02.svg) no-repeat center / contain;
     }
     .center{
         width: 65vw;
