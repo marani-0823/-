@@ -282,6 +282,8 @@ header{
 }
 /*右側ここまで*/
 
+
+
 /*main*/
 .center{
     order: 2;
@@ -289,9 +291,20 @@ header{
     z-index: 1;
     position: relative;
 }
+.center::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url(img/bg-pazuru.png);
+    background-repeat: repeat-y;
+    background-position: center top;
+    background-size: 100% auto;
+    z-index: -1;
+}
 
             /* 確認用ダミー */
-           * .center-scroll {
+            .center-scroll {
             width: 100%;
             }
 
@@ -339,11 +352,29 @@ article {
     z-index: 1;
 }
 .article-img2 {
+    position: relative;
+    z-index: 2;
     width: 13vw;
     margin-top: 17vh;
 }
 .article-img3 {
+    position: relative;
+    z-index: 2;
     width: 15vw;
+}
+.article-img4 {
+    position: absolute;
+    top: calc(15vh + 10% + 18vh);
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 100vw;
+    height: 40vh;
+    background-image: url(img/pc-senter-under.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    z-index: 2;
+    pointer-events: none;
 }
 .light {
     position: absolute;
@@ -364,9 +395,7 @@ article {
 
     display: flex;
     gap: 6vw;
-    z-index: 2;
-    margin-top: 16vh;
-    background-image: url(img/pc);
+    z-index: 3;
 }
 
 
