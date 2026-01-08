@@ -233,7 +233,7 @@ img{
     left: -5%;
 }
 .menu-scale{
-  width: min(80%, 320px);
+  width: min(22vw, 320px);
   position: relative;
   z-index: 10;
 }
