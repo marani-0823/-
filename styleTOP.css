@@ -436,22 +436,57 @@ article {
         bottom: -25vh;
         transform: translateX(-50%);
     }
-    .left-deco::after{
-        content: "";
-        position: absolute;
-        bottom: -18%;
+    .left-area{
+        width: 35vw;
+    }
+    .left-deco::before{
+        top: -50%;
         left: 50%;
-        transform: translateX(-52%);
-        width: calc(var(--left-base) * 6);
-        aspect-ratio: 4 / 1;
+        transform: translateX(-50%);
+        width: 170%;
+        aspect-ratio: 1.5 / 1;
+        background: url(img/tablet-pazuru01.svg) no-repeat center / contain;
+    }
+    .left-deco::after{
+        bottom: -70%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 230%;
+        aspect-ratio: 1.5 / 1;
         background: url(img/tablet-pazuru02.svg) no-repeat center / contain;
+    }
+    .left-logo{
+        margin-top: 30%;
+        width: 90%;
+        pointer-events: none;
+    }
+    .char1{
+        position: absolute;
+        width: 35%;
+        top: -8%;
+        left: -3%;
+        transform: translateX(-50%);
+        pointer-events: none;
+    }
+    .date-img{
+        position: absolute;
+        width: 65%;
+        top: 40%;
+        left: 17%;
+        transform: rotate(-5deg);
+    }
+    .char2{
+        position: absolute;
+        width: 45%;
+        top: 70%;
+        left: 70%;
+        transform: translateX(-50%);
+        pointer-events: none;
     }
     .center{
         width: 65vw;
     }
-    .left-area{
-        width: 35vw;
-    }
+    
 }
 /*スマホ*/
 @media (max-width: 768px) {
