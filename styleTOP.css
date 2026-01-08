@@ -88,10 +88,11 @@ img{
 
 
 /*左のパズル装飾　上と下*/
-.left-deco{
+.left-deco, .right-deco{
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: 4;
+  pointer-events: none;
 }
 .left-deco::before{
     content: "";
@@ -181,17 +182,17 @@ img{
   transform: translate(-50%, -50%);
 
   width: var(--menu-base);
-  height: 900px;        
+  aspect-ratio: 3/5;        
   
   overflow: visible;
 }
 
 
 /*右のパズル装飾 上と下*/
-.right-stage::before{
+.right-deco::before{
     content: "";
     position: absolute;
-    top: 3%;
+    top: -10%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -199,10 +200,10 @@ img{
     aspect-ratio: 4 / 1;
     background: url(img/pc-right-pazuru01.svg) no-repeat center / contain;
 }
-.right-stage::after{
+.right-deco::after{
     content: "";
     position: absolute;
-    bottom: 3%;
+    bottom: -10%;
     left: 50%;
     transform: translateX(-35%);
 
@@ -213,7 +214,7 @@ img{
 .char5{
     position: absolute;
     width: 30%;
-    top: 9%;
+    top: -3%;
     left: 98%;
     transform: translateX(-50%);
     pointer-events: none;
@@ -232,7 +233,7 @@ img{
     left: -5%;
 }
 .menu-scale{
-  width: min(20vw, 320px);
+  width: min(80%, 320px);
   position: relative;
   z-index: 10;
 }
