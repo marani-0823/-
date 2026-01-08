@@ -181,7 +181,7 @@ img{
   transform: translate(-50%, -50%);
 
   width: var(--menu-base);
-  height: 900px;        /* 左と同じ基準高さ */
+  height: 900px;        
   
   overflow: visible;
 }
@@ -231,16 +231,18 @@ img{
     top: 33%;
     left: -5%;
 }
-.menu a img:not(.char4, .char-stand){
-    z-index: 10;
-    width: 22vw;
+.menu-scale{
+  width: min(20vw, 320px); /* ← ここだけ触る */
+  position: relative;
+  z-index: 10;
 }
+
 /*看板の棒*/
-.menu::before{
+.menu-scale::before{
     content: "";
     position: absolute;
-    width: 6%;
-    height: 180%;
+    width: 7%;
+    height: 160%;
     background: #d9d9d9;
     top: 78%;
     left: 50%;
@@ -251,9 +253,9 @@ img{
 /*看板上のよくなるくん*/
 .char3-body{
     position: absolute;
-    width: 30%;            /* 看板幅基準 */
-    top: -28%;             /* 看板高さ基準 */
-    left: 25%;
+    width: 35%;            /* 看板幅基準 */
+    top: -13%;             /* 看板高さ基準 */
+    left: 17%;
     transform: translateX(-50%);
     z-index: -2;           /* 看板の後ろ */
     pointer-events: none;
@@ -261,8 +263,8 @@ img{
 .char3-arm{
     position: absolute;
     width: 10%;
-    top: -10%;
-    left: 35%;
+    top: 1%;
+    left: 29%;
     transform: translateX(-50%);
     z-index: 5;            /* 看板より前 */
     pointer-events: none;
@@ -275,6 +277,7 @@ img{
 .menu-board{
     width: 100%;
     display: block;
+    margin-top: 20px;
 }
 .char4{
     position: absolute;
