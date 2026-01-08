@@ -63,13 +63,9 @@ img{
     align-items: center;
 
     z-index: 9999;
+    overflow: hidden;
 }
 
-.left-inner{
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
 .left-wrap{
     position: relative;
     width: 100%;
@@ -77,7 +73,19 @@ img{
     overflow: hidden;
     /* 左エリアの基準サイズ */
     --left-base: min(30vw, 420px);
+} 
+.left-stage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: var(--left-base);
+  aspect-ratio: 3 / 5;   /* ← デザイン比率 */
+  
+  overflow: visible;    /* はみ出しOK */
 }
+
 
 /*左のパズル装飾　上と下*/
 .left-deco{
@@ -88,27 +96,27 @@ img{
 .left-deco::before{
     content: "";
     position: absolute;
-    top: -8%;
+    top: -19%;
     left: 50%;
-    transform: translateX(-48%);
-    width: calc(var(--left-base) * 3.7);
-    aspect-ratio: 4 / 1;
+    transform: translateX(-50%);
+    width: 140%;
+    aspect-ratio: 1.5 / 1;
     background: url(img/pc-left-pazuru01.svg) no-repeat center / contain;
 }
 .left-deco::after{
     content: "";
     position: absolute;
-    bottom: -7%;
+    bottom: -17%;
     left: 50%;
-    transform: translateX(-61%);
-    width: calc(var(--left-base) * 2.7);
-    aspect-ratio: 4 / 1;
+    transform: translateX(-85%);
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
     background: url(img/pc-left-pazuru02.svg) no-repeat center / contain;
 }
 
 /*左側内容*/
 .left-content{
-  position: relative;
+  position: absolute;
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -117,29 +125,29 @@ img{
   align-items: center;
 }
 .left-logo{
-  margin-top: clamp(120px, 20vh, 220px);
-  width: clamp(200px, 80%, 320px);
+  margin-top: 35%;
+  width: 65%;
   pointer-events: none;
 }
 .char1{
     position: absolute;
     width: 25%;
-    top: 30%;
+    top: 31%;
     left: 15%;
     transform: translateX(-50%);
     pointer-events: none;
 }
 .date-img{
     position: absolute;
-    width: 70%;
-    top: 37%;
+    width: 65%;
+    top: 40%;
     left: 17%;
     transform: rotate(-15deg);
 }
 .char2{
     position: absolute;
     width: 35%;
-    top: 61%;
+    top: 70%;
     left: 85%;
     transform: translateX(-50%);
     pointer-events: none;
@@ -148,7 +156,7 @@ img{
 
 
 /*右側部分*/
-header{
+.right-area{
     order: 3;
     width: 30vw;
     height: 100vh;
@@ -157,44 +165,55 @@ header{
 
     z-index: 9999;
 }
+
 .menu-wrap{
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    /* 右メニューの基準サイズ */
-    --menu-base: min(30vw, 420px);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  --menu-base: min(30vw, 420px);
+}
+.right-stage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: var(--menu-base);
+  height: 900px;        /* 左と同じ基準高さ */
+  
+  overflow: visible;
 }
 
+
 /*右のパズル装飾 上と下*/
-.menu-wrap::before{
+.right-stage::before{
     content: "";
     position: absolute;
-    top: -8%;
+    top: -2%;
     left: 50%;
     transform: translateX(-50%);
 
-    width: calc(var(--menu-base) * 3.7);
+    width: 350%;
     aspect-ratio: 4 / 1;
     background: url(img/pc-right-pazuru01.svg) no-repeat center / contain;
 }
-.menu-wrap::after{
+.right-stage::after{
     content: "";
     position: absolute;
     bottom: -6%;
     left: 50%;
     transform: translateX(-35%);
 
-    width: calc(var(--menu-base) * 2.0);
+    width: 200%;
     aspect-ratio: 4 / 1;
     background: url(img/pc-right-pazuru02.svg) no-repeat center / contain;
 }
 .char5{
     position: absolute;
     width: 30%;
-    top: -2%;
+    top: 3%;
     left: 98%;
     transform: translateX(-50%);
     pointer-events: none;
@@ -208,6 +227,9 @@ header{
     align-items: center;
     gap: 20px;
     transform: rotate(10deg);
+
+    top: 33%;
+    left: -5%;
 }
 .menu a img:not(.char4, .char-stand){
     z-index: 10;
@@ -217,7 +239,7 @@ header{
 .menu::before{
     content: "";
     position: absolute;
-    width: 7%;
+    width: 6%;
     height: 180%;
     background: #d9d9d9;
     top: 78%;
@@ -229,18 +251,18 @@ header{
 /*看板上のよくなるくん*/
 .char3-body{
     position: absolute;
-    width: 45%;            /* 看板幅基準 */
+    width: 30%;            /* 看板幅基準 */
     top: -28%;             /* 看板高さ基準 */
-    left: 20%;
+    left: 25%;
     transform: translateX(-50%);
     z-index: -2;           /* 看板の後ろ */
     pointer-events: none;
 }
 .char3-arm{
     position: absolute;
-    width: 11%;
-    top: -9%;
-    left: 35.5%;
+    width: 10%;
+    top: -10%;
+    left: 35%;
     transform: translateX(-50%);
     z-index: 5;            /* 看板より前 */
     pointer-events: none;
