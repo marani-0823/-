@@ -96,7 +96,7 @@ img{
 .left-deco::before{
     content: "";
     position: absolute;
-    top: -19%;
+    top: -13%;
     left: 50%;
     transform: translateX(-50%);
     width: 140%;
@@ -106,7 +106,7 @@ img{
 .left-deco::after{
     content: "";
     position: absolute;
-    bottom: -17%;
+    bottom: -10%;
     left: 50%;
     transform: translateX(-85%);
     width: 100%;
@@ -191,7 +191,7 @@ img{
 .right-stage::before{
     content: "";
     position: absolute;
-    top: -2%;
+    top: 3%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -202,7 +202,7 @@ img{
 .right-stage::after{
     content: "";
     position: absolute;
-    bottom: -6%;
+    bottom: 3%;
     left: 50%;
     transform: translateX(-35%);
 
@@ -213,7 +213,7 @@ img{
 .char5{
     position: absolute;
     width: 30%;
-    top: 3%;
+    top: 9%;
     left: 98%;
     transform: translateX(-50%);
     pointer-events: none;
@@ -232,7 +232,7 @@ img{
     left: -5%;
 }
 .menu-scale{
-  width: min(20vw, 320px); /* ← ここだけ触る */
+  width: min(20vw, 320px);
   position: relative;
   z-index: 10;
 }
