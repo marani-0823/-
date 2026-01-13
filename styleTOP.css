@@ -417,7 +417,7 @@ img{
     inset: 0;
 
     background-color: #fff;
-    background-image: url(img/bg-pazuru.png);
+    background-image:  linear-gradient(rgba(255, 255, 255, 0.8)), url(img/bg-pazuru.png);
     background-repeat: repeat-y;
     background-position: center top;
     background-size: 100% auto;
@@ -456,7 +456,7 @@ article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url(img/bg-top.png);
+    background-image:url(img/bg-top.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100% 60%;
