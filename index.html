@@ -21,7 +21,30 @@
 
 
 </head>
-<body>
+  <body>
+    
+
+    <!-- ハンバーガーボタン -->
+  <button class="hamburger" aria-label="メニュー">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- スライドメニュー -->
+  <nav class="sp-menu">
+  <a href="index.html" class="sp-menu-item">
+    <span class="main">HOME</span>
+    <span class="sub">サイトトップへ</span>
+  </a>
+
+  <a href="indexSAKUHIN.html" class="sp-menu-item">
+    <span class="main">LINEUP</span>
+    <span class="sub">作品一覧</span>
+  </a>
+</nav>
+
+
   <div class="bg-grid"></div>
   <!-- 緑のグラウンド　svg使わなかった -->
   <div class="global-oval"></div>
@@ -52,9 +75,9 @@
           <div class="menu-scale">
             <img src="img/yokunaru03_1.svg" class="char3-body" alt="">
             <img src="img/yokunaru03_2.svg" class="char3-arm" alt="">
-            <a href="index.html#home">
+            <a href="index.html">
               <img src="img/menu-home.svg" class="menu-board" alt="topへ"></a>
-            <a href="index.html#lineup" class="menu-item-last">
+            <a href="indexSAKUHIN.html" class="menu-item-last">
               <div class="puzzle-wrap">
                 <img src="img/menu-lineup.svg" class="menu-board" alt="">
                 <img src="img/pc-right-dai.svg" class="char-stand" alt="">
@@ -111,15 +134,36 @@
             <section class="test-block">SECTION 04</section>
             <section class="test-block">SECTION 05</section> -->
         </div>
-     
-
-    
-  
 
     <!--footer-->
-    <footer> 
-      <small class="cop">&copy; aaaaaaaaa</small>
+      <footer>
+        <div class="kousin-chu">よくなる展X（旧Twitter）<br>更新中！</div>
+        <a href="https://x.com/yokunaruten?s=21&t=NQNTV_Ntd4hqzULq3GbLaQ">
+          <img class="X" src="img/X.png" alt="X">
+        </a>
+        <img class="oka-yokunaru" src="img/footer_y.svg" alt="オレンジ丘のよくなるくん">
+        <div class="oka-dodai">
+          <div class="mail">yokunaruten@gmail.com</div>
+          <small>Copyright &copy; Yokunaru Inc.</small>
+        </div>
     </footer> 
   </div>
+
+  <script>
+      const hamburger = document.querySelector('.hamburger');
+      const spMenu = document.querySelector('.sp-menu');
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        spMenu.classList.toggle('active');
+      });
+
+      window.addEventListener('resize', () => {
+      if (window.innerWidth > 1150) { // PC表示に戻ったら
+        hamburger.classList.remove('active');
+        spMenu.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
