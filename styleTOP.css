@@ -426,7 +426,64 @@ article {
     z-index: 3;
 }
 
+/*フッター*/
+footer{
+    background-color: #FFF;
+    background-image: linear-gradient(rgba(255,255,255,0.8)), url(img/bg-pazuru.png);
+    background-size: 100% auto;
+}
+.kousin-chu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
+    font-size: 2vw;
+    font-weight: 800;
+    padding: 5vw 0 0;
+}
+.kousin-chu::before{
+    content: "";
+    width: 2vw;
+    height: 10vw;
+    background-image: url("img/bouhi.png");
+    background-size: contain;
+    background-position: center;
+}
+.kousin-chu::after{
+    content: "";
+    width: 2vw;
+    height: 10vw;
+    background-image: url("img/boumi.png");
+    background-size: contain;
+    background-position: center;
+}
+
+.X{
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+}
+.oka-yokunaru{
+    display: block;
+    width: 100%;
+
+    margin: -3.8vw 0 -1px;
+}
+.oka-dodai{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    background-color: #F5A200;
+    padding: 3vw 0 5vw;
+}
+
+.mail ,.oka-dodai small{
+    font-size: 2vw;
+}
+/*フッターここまで*/
 
 
 /* レスポンシブデザイン */
