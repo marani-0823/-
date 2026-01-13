@@ -338,7 +338,7 @@ img{
             .center-block {
                 position: relative;
                 min-height: 150vh;
-                overflow: hidden;
+                overflow: visible;
             
 
             font-size: 48px;
@@ -357,15 +357,15 @@ img{
 
 article {
     position: relative;
-    width: 100%;
-    min-height: 100%;
+    /* width: 40vw; */
+    min-height: calc(150vh + 50vh);
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: url(img/bg-top.png);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 100% 60%;
+    background-size: 40vw 70vh;
 }
 
 /*topの画像設定*/
@@ -392,15 +392,8 @@ article {
 .article-img4 {
     position: absolute;
     top: calc(18vh + 29.5%);
-    left: 0;
-    right: 0;
-
-    width: auto;
-    height: 50vh;
-    background-image: url(img/pc-senter-under.svg);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 350% auto;
+    margin: 0 auto;
+    height: auto;
     z-index: 2;
     pointer-events: none;
 }
@@ -412,6 +405,20 @@ article {
     width: 14vw;
     max-width: none;
     z-index: 1;
+    pointer-events: none;
+}
+.top-textback {
+    width: 20vw;
+    max-width: 600px;
+}
+
+.textback {
+    position: absolute;
+    top: calc(15vh + 20% + 18vh);
+    left: 50%;
+    margin-top: 20vh;
+    transform: translateX(-50%);
+    z-index: 3;
     pointer-events: none;
 }
 
