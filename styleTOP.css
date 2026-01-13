@@ -364,15 +364,16 @@ article {
 }
 .article-img4 {
     position: absolute;
-    top: calc(15vh + 10% + 18vh);
-    left: 50%;
-    transform: translateX(-50%);
+    top: calc(18vh + 29.5%);
+    left: 0;
+    right: 0;
 
-    width: 100vw;
-    height: 40vh;
+    width: auto;
+    height: 50vh;
     background-image: url(img/pc-senter-under.svg);
     background-repeat: no-repeat;
     background-position: center top;
+    background-size: 350% auto;
     z-index: 2;
     pointer-events: none;
 }
@@ -389,7 +390,7 @@ article {
 
 .top {
     position: absolute;
-    top: calc(15vh + 10%);
+    top: calc(15vh + 20%);
     left: 50%;
     transform: translateX(-50%);
 
