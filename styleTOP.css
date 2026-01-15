@@ -521,8 +521,11 @@ article {
 }
 
 .img07{
-    margin: 7% 7% 0 auto;
+    margin: 7% 0 0 auto;
     width: fit-content;
+}
+.img07 img{
+    width: 90%;
 }
 main p, main h3, main h1{
     color: #4F3636;
@@ -537,18 +540,39 @@ main p, main h3, main h1{
 }
 main h3 {
     font-size: 25px;
-    padding-bottom: 10%;
+    padding-bottom: 5%;
 }
+
 .sakuhin-pick-up{
+    margin-bottom: 15%;
 }
-.pro-img1{
+.frame{
+    position: relative;
+}
+.yokunaru-img{
+    width: 30%;
+    position: absolute;
+    top: 65%;
+    left: 60%;
+}
+.pro-img{
     display: block;
-    width: 93%;
+    width: 86%;
     margin: 0 auto;
 
-    background-image: url(img/風景印スタンプラリー.jpg);
-    background-size: 90%;
+    background-size: 93%;
     background-position: 1vw 1vw;/*左・上*/
+
+    overflow: hidden;
+}
+.img1{
+    background-image: url(img/風景印スタンプラリー.jpg);
+}
+.img2{
+    background-image: url(img/エゾシカ肉.jpg);
+}
+.img3{
+    background-image: url(img/くりふと.jpg);
 }
 .main-text{
     margin: 7% auto;
