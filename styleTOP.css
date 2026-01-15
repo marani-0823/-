@@ -431,7 +431,7 @@ width: 100%;
 }
 .center-block {
     position: relative;
-    min-height: 150vh;
+    min-height: 120vh;
     overflow: hidden;
     font-size: 48px;
     font-weight: bold;
@@ -443,7 +443,6 @@ width: 100%;
 
 article {
     position: relative;
-    /* width: 40vw; */
     min-height: calc(150vh + 50vh);
     display: flex;
     flex-direction: column;
@@ -455,9 +454,9 @@ article {
 }
 
 /*topの画像設定*/
-.back-img {
+/* .back-img {
     width: 100%;
-}
+} */
 .article-img1 {
     width: 25vw;
     margin-top: 4vh;
@@ -749,8 +748,42 @@ footer{
         transform: translateX(-50%);
         pointer-events: none;
     }
+
+    /*真ん中*/
     .center{
         width: 65vw;
+    }
+    article{
+        background-size: 65vw 70vh;
+    }
+    .light{
+        width: 44vw;
+    }
+    .article-img1{
+        width: 50vw;
+    }
+    .top{
+        top: 20%;
+        gap: 3vw;
+    }
+    .article-img2{
+        width: 25vw;
+        margin-top: 15vh;
+    }
+    .article-img3{
+        width: 33vw;
+    }
+    .top-textback{
+        width: 45vw;
+    }
+    .textback{
+        margin-top: 0;
+    }
+    .article-img4{
+        margin-top: 50%;
+    }
+    .nohara{
+        width: 100%;
     }
     .pro-img{
         background-position: 2vw 2vw;
@@ -772,7 +805,7 @@ footer{
     }
     article{
         width: 100vw;
-        background-size: 100vw;
+        background-size: 100vw 80vh;
     }
     .light{
         width: 50vw;
@@ -781,21 +814,28 @@ footer{
         width: 90vw;
     }
     .top{
-        top: 24%;
+        top: 26%;
+        gap: 2vw;
     }
     .article-img2{
-        width: 35vw;
+        width: 38vw;
+        margin-top: 23vh;
     }
     .article-img3{
-        width: 43vw;
+        width: 53vw;
     }
     .top-textback{
         width: 85vw;
     }
+    .textback{
+        margin-top: 20vh;
+    }
     .article-img4{
         margin-top: 40%;
     }
-
+    .nohara{
+        width: 100%;
+    }
     .pro-img{
         background-position: 3vw 3vw;
     }
