@@ -15,7 +15,7 @@ body{
     justify-content: space-between;
     gap: 0;
 
-    color: #000;
+    color: #4F3636;
     background: #fff;
     
     
@@ -524,16 +524,42 @@ article {
     margin: 7% 7% 0 auto;
     width: fit-content;
 }
-main p{
+main p, main h3, main h1{
     color: #4F3636;
     text-align: center;
-    font-family: 'VDL-LogoJrBlack';
 }
-.main-text{
+.main-title{
+    padding: 10% 0;
     font-size: 25px;
 }
 .text-big {
-    font-size: 35px;
+    font-size: 36px;
+}
+main h3 {
+    font-size: 25px;
+    padding-bottom: 10%;
+}
+.sakuhin-pick-up{
+}
+.pro-img1{
+    display: block;
+    width: 93%;
+    margin: 0 auto;
+
+    background-image: url(img/風景印スタンプラリー.jpg);
+    background-size: 90%;
+    background-position: 1vw 1vw;/*左・上*/
+}
+.main-text{
+    margin: 7% auto;
+    padding: 5%;
+    text-align: left;
+    width: 90%;
+    font-family: 'Zen Kaku Gothic New';
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #FFF8E6;
+    border-radius: 5%;
 }
 /*フッター*/
 footer{
