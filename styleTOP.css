@@ -600,9 +600,15 @@ main h3 {
 /*よくなるくん*/
 .about-yokunaru{
     position: relative;
-    background-image: url(img/bg-under.png);
+    margin: 20% 0;
     height: 155vh;
-    margin-top: 20%;
+}
+.bg-under{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }
 .yokunarukun{
     position: absolute;
@@ -613,8 +619,8 @@ main h3 {
 }
 .glass{
     position: absolute;
-    top: 18%;
-    left: 18%;
+    top: 19%;
+    left: 14%;
     width: 33%;
     z-index: 2;
 }
