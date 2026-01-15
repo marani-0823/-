@@ -465,13 +465,11 @@ article {
     z-index: 1;
 }
 .article-img2 {
-    position: relative;
     z-index: 2;
     width: 13vw;
-    margin-top: 17vh;
+    margin-top: 20%;
 }
 .article-img3 {
-    position: relative;
     z-index: 2;
     width: 15vw;
 }
@@ -492,7 +490,7 @@ article {
     transform: translateX(-50%);
     width: 14vw;
     max-width: none;
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
 }
 .top-textback {
@@ -660,5 +658,24 @@ footer{
     }
     .center{
         width: 100vw;
+    }
+    article{
+        width: 100vw;
+        background-size: 100vw;
+    }
+    .light{
+        width: 50vw;
+    }
+    .article-img1{
+        width: 90vw;
+    }
+    .top{
+        top: 24%;
+    }
+    .article-img2{
+        width: 35vw;
+    }
+    .article-img3{
+        width: 43vw;
     }
 }
