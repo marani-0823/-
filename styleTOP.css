@@ -709,7 +709,9 @@ footer{
     .center{
         width: 65vw;
     }
-    
+    .pro-img{
+        background-position: 2vw 2vw;
+    }
 }
 /*スマホ*/
 @media (max-width: 768px) {
@@ -750,5 +752,8 @@ footer{
     .article-img4{
         margin-top: 40%;
     }
-    
+
+    .pro-img{
+        background-position: 3vw 3vw;
+    }
 }
