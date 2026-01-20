@@ -683,7 +683,43 @@ main h3 {
     min-width: 420px;
     margin: 0 auto 15%;
 }
-
+.zemi-name-sugisawa {
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffff;
+    z-index: 2;
+    pointer-events: none;
+}
+.zemi-logo-sugisawa {
+    position: absolute;
+    top: 23%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 1;
+    pointer-events: none;
+}
+.zemi-text-sugisawa p {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78%;
+    font-size: 17px;
+    line-height: 2.0;
+    color: #ffff;
+    text-align: left;
+    
+    z-index: 2;
+}
+.zemi-text-sugisawa a {
+    color: #ffff;
+    text-decoration: underline;
+}
 
 /*杉澤ゼミここまで*/
 
