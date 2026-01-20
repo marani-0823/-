@@ -610,7 +610,7 @@ main h3 {
 .saitozemi {
     position: relative;
     width: min(80%, 420px);
-    min-width: 320px;
+    min-width: 420px;
     margin: 0 auto 15%;
 }
 .zemikanban {
@@ -661,7 +661,8 @@ main h3 {
     position: relative;
     width: fit-content;
 }
-.snsbox {
+/* SNSのほうがどうなるかわからないのでコメントアウト */
+/* .snsbox {
     position: absolute;
     right: -11%;
     bottom: 13%;
@@ -672,7 +673,7 @@ main h3 {
 .snsbox .sns {
     width: 30%;
     max-width: 90px;
-}
+} */
 
 
 /*斎藤ゼミここまで*/
