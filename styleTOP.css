@@ -568,13 +568,13 @@ main h3 {
     overflow: hidden;
 }
 .img1{
-    background-image: url(img/風景印スタンプラリー.jpg);
+    background-image: url(img/postmark-rally.png);
 }
 .img2{
-    background-image: url(img/エゾシカ肉.jpg);
+    background-image: url(img/ezosikaniku.JPG);
 }
 .img3{
-    background-image: url(img/くりふと.jpg);
+    background-image: url(img/kurihuto.jpg);
 }
 .main-text{
     margin: 7% auto;
