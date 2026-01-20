@@ -610,6 +610,7 @@ main h3 {
 .saitozemi {
     position: relative;
     width: min(80%, 420px);
+    min-width: 320px;
     margin: 0 auto 15%;
 }
 .zemikanban {
@@ -635,7 +636,7 @@ main h3 {
     top: 23%;
     left: 50%;
     transform: translateX(-50%);
-    width: 27vw;
+    width: 80%;
     z-index: 1;
     pointer-events: none;
 }
@@ -665,7 +666,7 @@ main h3 {
     right: -11%;
     bottom: 13%;
     display: flex;
-    gap: 0.8%;
+    gap: 3%;
     z-index: 5;
 }
 .snsbox .sns {
