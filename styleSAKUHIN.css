@@ -4,22 +4,22 @@
 
 html{
     font-size: 100%;/*ユーザーの設定した文字サイズを反映*/
-    
 }
 
 body{
-    
     font-family:"M PLUS 1","Zen Kaku Gothic New", sans-serif;
+    font-style: normal;
+
     font-style: normal;
     display: flex;
     justify-content: space-between;
     gap: 0;
-
+    
+    background-color: #FFF;
     color: #4F3636;
-    background: #fff;
-    
-    
 }
+
+/*/////////千葉ちゃん部分////////////*/
 .bg-grid{
     position: fixed;
     inset: 0;
@@ -35,6 +35,7 @@ body{
 img{
     display: block;
 }
+
 /*ハンバーガーメニュー（PC非表示）*/
 /*ハンバーガーボタン */
 .hamburger{
@@ -180,7 +181,6 @@ img{
   overflow: visible;    /* はみ出しOK */
 }
 
-
 /*左のパズル装飾　上と下*/
 .left-deco, .right-deco{
   position: absolute;
@@ -248,6 +248,7 @@ img{
     pointer-events: none;
 }
 /* 左側ここまで */
+
 
 
 /*右側部分*/
@@ -401,9 +402,6 @@ img{
     pointer-events: none;
 }
 /*右側ここまで*/
-
-
-
 /*main*/
 .center{
     order: 2;
@@ -412,106 +410,53 @@ img{
     position: relative;
 }
 
-
-/* 確認用ダミー */
-.center-scroll {
-width: 100%;
-}
-.center-scroll::before {
+/* .center::before {
     content: "";
     position: absolute;
     inset: 0;
 
-    background-color: #fff;
-    background-image:  linear-gradient(rgba(255, 255, 255, 0.8)), url(img/bg-pazuru.png);
+    background-image: url(img/bg-pazuru.png);
     background-repeat: repeat-y;
     background-position: center top;
     background-size: 100% auto;
     z-index: -1;
-}
-.center-block {
-    position: relative;
-    min-height: 120vh;
-    overflow: hidden;
-    font-size: 48px;
-    font-weight: bold;
-    color: #333;
-    z-index: -1;
-}
+} */
+
+            /* 確認用ダミー */
+            .center-scroll {
+            width: 100%;
+            }
+
+            .center-block {
+                position: relative;
+                min-height: 150vh;
+                overflow: hidden;
+            
+
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            }
+
+            /* 見分けやすいように交互に色を変える */
+           /* .center-block:nth-child(odd) {
+            background: rgba(255, 255, 255, 0.6);
+            }
+            .center-block:nth-child(even) {
+            background: rgba(0, 0, 0, 0.05);
+            } */
 
 
 
-article {
-    position: relative;
-    min-height: calc(150vh + 50vh);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image:url(img/bg-top.png);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 40vw 70vh;
-}
 
 /*topの画像設定*/
-/* .back-img {
+.back-img {
     width: 100%;
-} */
-.article-img1 {
-    width: 25vw;
-    margin-top: 4vh;
-    position: relative;
-    z-index: 1;
-}
-.article-img2 {
-    z-index: 2;
-    width: 13vw;
-    margin-top: 20%;
-}
-.article-img3 {
-    z-index: 2;
-    width: 15vw;
-}
-.article-img4 {
-    /* position: absolute;
-    top: calc(18vh + 29.5%);
-    margin: 0 auto;
-    height: auto;
-    z-index: 2;
-    width: 80%;
-    pointer-events: none; */
-    margin-top: 30%;
-    width: 100%;
-}
-
-.light {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 14vw;
-    max-width: none;
-    z-index: 2;
-    pointer-events: none;
-}
-.top-textback {
-    width: 30vw;
-    max-width: 600px;
-}
-
-.textback {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 20vh;
-    transform: translateX(-50%);
-    z-index: 3;
-    pointer-events: none;
 }
 
 .top {
     position: absolute;
-    top: calc(15vh + 20%);
+    top: calc(15vh + 10%);
     left: 50%;
     transform: translateX(-50%);
 
@@ -520,190 +465,347 @@ article {
     z-index: 3;
 }
 
-.img07{
-    margin: 7% 0 0 auto;
-    width: fit-content;
+
+
+
+/* レスポンシブデザイン */
+/*タブレット*/
+@media (max-width: 1150px) {
+    header {
+        display: none;
+    }
+    .hamburger{
+        display: flex;
+    }
+    .global-oval{
+        bottom: -25vh;
+        transform: translateX(-50%);
+    }
+    .left-area{
+        width: 35vw;
+    }
+    .left-deco::before{
+        top: -50%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 170%;
+        aspect-ratio: 1.5 / 1;
+        background: url(img/tablet-pazuru01.svg) no-repeat center / contain;
+    }
+    .left-deco::after{
+        bottom: -70%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 230%;
+        aspect-ratio: 1.5 / 1;
+        background: url(img/tablet-pazuru02.svg) no-repeat center / contain;
+    }
+    .left-logo{
+        margin-top: 30%;
+        width: 90%;
+        pointer-events: none;
+    }
+    .char1{
+        position: absolute;
+        width: 35%;
+        top: -8%;
+        left: -3%;
+        transform: translateX(-50%);
+        pointer-events: none;
+    }
+    .date-img{
+        position: absolute;
+        width: 65%;
+        top: 40%;
+        left: 17%;
+        transform: rotate(-5deg);
+    }
+    .char2{
+        position: absolute;
+        width: 45%;
+        top: 70%;
+        left: 70%;
+        transform: translateX(-50%);
+        pointer-events: none;
+    }
+    .center{
+        width: 65vw;
+    }
+    
 }
-.img07 img{
-    width: 90%;
+/*スマホ*/
+@media (max-width: 768px) {
+    .left-area {
+        display: none;
+    }
+    body {
+        justify-content: center;
+    }
+    .global-oval{
+        display: none;
+    }
+    .center{
+        width: 100vw;
+    }
 }
-main p, main h3, main h1{
-    color: #4F3636;
+
+
+
+
+/*///////////suzuki担当////////////*/
+
+/*代表作品*/
+.gachizenbu{
+    width: 40vw;
+}
+@media (max-width: 1150px) {
+    .gachizenbu{
+        width: 65vw;
+    }
+}
+@media (max-width: 768px) {
+    .gachizenbu{
+        width: 100vw;
+    }
+  
+}
+.sakuhin-all{
+    background-color: #FFF;
+    background-image: linear-gradient(rgba(255,255,255,0.8)), url(img/bg-pazuru.png);
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    padding: 0 0 5vw 0;
+}
+.sakuhin-all h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 3vw;
+    font-weight: 800;
+    padding: 10vw 0 10vw;
+}
+@media (max-width: 768px) {
+    .sakuhin-all h1{
+        font-size: 5vw;
+    }
+}
+
+.sakuhin-pick-up h3,.sakuhin-pick-up p{
+    display: flex;
+    justify-content: center;
     text-align: center;
 }
-.main-title{
-    padding: 10% 3%;
-    font-size: 25px;
+.sakuhin-pick-up h3{
+    font-weight: 600;
+    font-size: 1.75vw;
+    margin: 0 0 2vw 0;
 }
-.text-big {
-    font-size: 36px;
+@media (max-width: 768px) {
+    .sakuhin-pick-up h3{
+        font-size: 2.5vw;
+    }
 }
-main h3 {
-    font-size: 25px;
-    padding: 0 3% 5% 3%;
+.h3reigai{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    font-weight: 600;
+    font-size: 1.75vw;
+    margin: 0 0 1vw 0;
+}
+@media (max-width: 768px) {
+    .h3reigai{
+        font-size: 3vw;
+    }
+}
+.sakuhin-pick-up p{
+    font-size: 1.25vw;
+    margin: 0 0 2vw 0;
+}
+@media (max-width: 768px) {
+    .sakuhin-pick-up p{
+        font-size: 2vw;
+    }
 }
 
-.sakuhin-pick-up{
-    margin-bottom: 15%;
-}
-.frame{
-    position: relative;
-}
-.yokunaru-img{
-    width: 30%;
-    position: absolute;
-    top: 65%;
-    left: 60%;
-}
-.pro-img{
+.pro-img1{
     display: block;
-    width: 86%;
-    margin: 0 auto;
+    width: 94%;
+    margin: 0 0 1vw 2.5vw;
 
-    background-size: 93%;
+    background-image: url(img/画像/01_インタラクティブ絵本.jpg);
+    background-size: 90%;
     background-position: 1vw 1vw;/*左・上*/
 
     overflow: hidden;
 }
-.img1{
-    background-image: url(img/風景印スタンプラリー.jpg);
+/* レスポンシブデザイン */
+@media (max-width: 1150px) {
+  .pro-img1{
+    width: 93%;
+    margin: 0 0 1vw 4.5vw;
+    }
 }
-.img2{
-    background-image: url(img/エゾシカ肉.jpg);
+@media (max-width: 768px) {
+    .pro-img1{
+    width: 93%;
+    margin: 0 0 1vw 7vw;
+    }
+  
 }
-.img3{
-    background-image: url(img/くりふと.jpg);
-}
-.main-text{
-    margin: 7% auto;
-    padding: 5%;
-    text-align: left;
-    width: 90%;
-    font-family: 'Zen Kaku Gothic New';
-    font-size: 20px;
-    font-weight: 600;
-    background-color: #FFF8E6;
-    border-radius: 5%;
-}
-.lineup-link{
-    position: relative;
-}
-.link-bg{
-    width: 100%;
-}
-.link{
-    position: absolute;
-    width: 35%;
-    top: 50%;
-    left: 45%;
-}
-
-/*↓ゼミ紹介↓*/
-/*斎藤一ゼミの設定*/
-.zemi-title {
-    font-size: 36px;
-    margin-top: 30vh;
-    margin-bottom: 5vh;
-}
-.saitozemi {
-    position: relative;
-    width: fit-content;
-    margin: 0 auto 15%;
-}
-.zemikanban {
-    position: relative;
+.pro-img2{
     display: block;
+    width: 86%;
+    margin: 0 auto 5vw;
+
+    background-image: url(img/画像/02_エゾシカ革製品.jpg);
+    background-size: 93%;
+    background-position: center;
+}
+.pro-img3{
+    display: block;
+    width: 86%;
+    margin: 0 auto 4vw;
+
+    background-image: url(img/画像/03_ニッセツ.jpg);
+    background-size: 93%;
+    background-position: center 1.5vw;
+}
+.pro-img4{
+    display: block;
+    width: 86%;
+    margin: 0 auto 5vw;
+
+    background-image: url(img/画像/04_スキーオリエンテーリング.jpg);
+    background-size: 93%;
+    background-position: center;
+}
+.pro-img5{
+    display: block;
+    width: 86%;
+    margin: 0 auto 4vw;
+
+    background-image: url(img/画像/05_江別楽友協会.png);
+    background-size: 93%;
+    background-position: center 1.5vw;
+}
+.pro-img6{
+    display: block;
+    width: 86%;
     margin: 0 auto;
-    z-index: 0;
-}
-.zemi-name {
-    position: absolute;
-    top: 23vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 24px;
-    font-weight: 600;
-    color: #ffff;
-    z-index: 2;
-    pointer-events: none;
-}
-.zemilogo-backimg {
-    position: absolute;
-    top: 27vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 27vw;
-    z-index: 1;
-    pointer-events: none;
-}
-.saitozemi-logo {
-    position: absolute;
-    top: 29.5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 10vw;
-    z-index: 3;
-    pointer-events: none;
-}
-.zemi-text p{
-    position: absolute;
-    top: 44%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 78%;
-    font-size: 20px;
-    line-height: 2.0;
-    color: #ffff;
-    text-align: left;
-    
-    z-index: 2;
-}
-.zemi-text a {
-    color: #ffff;
-    text-decoration: underline;
+
+    background-image: url(img/画像/06_エゾシカ肉の消費促進.jpg);
+    background-size: 93%;
+    background-position: center;
 }
 
 
-/*斎藤ゼミここまで*/
 
-/*杉澤ゼミの設定*/
 
-/*杉澤ゼミここまで*/
+/*その他作品*/
+.sonota{
+    background-color: #FFF;
+    background-image: url(img/sonota_haikei.svg);
+    background-size: cover;
+    background-position: center;
 
-/*よくなるくん*/
-.about-yokunaru{
-    position: relative;
-    margin: 20% 0;
-    height: 155vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 2vw;
 }
-.bg-under{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
+.hoka-moji{
+    background-color: #FFF;
+    background-image: linear-gradient(0deg, transparent calc(100% - 1px), #a7def7 calc(100% - 1px)),
+    linear-gradient(90deg, transparent calc(100% - 1px), #a7def7 calc(100% - 1px));
+    background-size: 35px 35px;
+    background-repeat: repeat;
+    background-position: center center;
+
+    margin: 10vw 3vw 8vw;
+    padding: 4.5vw 2vw;
+
+    border-radius: 2vw;
 }
-.yokunarukun{
-    position: absolute;
-    top: 15%;
-    left: 10%;
-    z-index: 1;
-    width: 80%;
+
+@media (max-width: 768px) {
+    .hoka-moji{
+        font-size: 2.5vw;
+    }
+  
 }
-.glass{
-    position: absolute;
-    top: 18%;
-    left: 14%;
-    width: 37%;
-    z-index: 2;
+
+
+@keyframes bgChange {
+    0%   { background-image: url("img/画像/sonota_1.jpg"); }
+    15%  { background-image: url("img/画像/sonota_2.jpg"); }
+    30%  { background-image: url("img/画像/sonota_3.jpg"); }
+    45%  { background-image: url("img/画像/sonota_4.jpg"); }
+    60%  { background-image: url("img/画像/sonota_5.jpg"); }
+    75%  { background-image: url("img/画像/sonota_6.jpg"); }
+    90%  { background-image: url("img/画像/sonota_7.jpg"); }
+    100% { background-image: url("img/画像/sonota_1.jpg"); }
 }
-.tenji{
-    position: absolute;
-    top: 17%;
-    left: 0;
-    width: 100%;
-    z-index: 0;
+.hoka-suraido{
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+
+    animation: bgChange 12s steps(1) infinite;/*///////////////////////////////////////////////////////////*/
+
+    margin: 0 3vw;
+    padding: 18vw 2vw;
+    border-radius: 2vw;
 }
+@media (max-width: 1150px) {
+    .hoka-suraido {
+        margin: 0 6vw;
+        padding: 25vw 2vw;
+    }
+    .hoka-moji{
+        margin: 10vw 6vw 8vw;
+    }
+  
+}
+@media (max-width: 768px) {
+    .hoka-suraido {
+        margin: 0 12vw;
+        padding: 32vw 2vw;
+    }
+    .hoka-moji{
+        margin: 10vw 12vw 8vw;
+    }
+  
+}
+
+.hoka-modoru{
+    text-align: initial;
+    background-color: #006B5C;
+    color: #FFF;
+
+    width: fit-content;
+
+    margin: 5vw 3vw 10vw;
+    padding: 2.5vw 3vw;
+
+    border-radius: 3vw;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
 
 /*フッター*/
 footer{
@@ -757,6 +859,17 @@ footer{
   
 }
 
+/* footer h1::before{
+    content: "\\";
+    font-weight: 400;
+    font-size: 3em; /*2倍サイズ*/
+/* }
+footer h1::after{
+    content: "/";
+    font-weight: 400;
+    font-size: 3em; 2倍サイズ */
+/*} */
+
 .X{
     display: block;
     width: 30%;
@@ -795,154 +908,16 @@ footer{
 /*フッターここまで*/
 
 
-/* レスポンシブデザイン */
-/*タブレット*/
-@media (max-width: 1150px) {
-    header{
-        display: none;
-    }
-    .hamburger{
-        display: flex;
-    }
-    
-    .global-oval{
-        bottom: -25vh;
-        transform: translateX(-50%);
-    }
-    .left-area{
-        width: 35vw;
-    }
-    .left-deco::before{
-        top: -50%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 170%;
-        aspect-ratio: 1.5 / 1;
-        background: url(img/tablet-pazuru01.svg) no-repeat center / contain;
-    }
-    .left-deco::after{
-        bottom: -70%;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 230%;
-        aspect-ratio: 1.5 / 1;
-        background: url(img/tablet-pazuru02.svg) no-repeat center / contain;
-    }
-    .left-logo{
-        margin-top: 30%;
-        width: 90%;
-        pointer-events: none;
-    }
-    .char1{
-        position: absolute;
-        width: 35%;
-        top: -8%;
-        left: -3%;
-        transform: translateX(-50%);
-        pointer-events: none;
-    }
-    .date-img{
-        position: absolute;
-        width: 65%;
-        top: 40%;
-        left: 17%;
-        transform: rotate(-5deg);
-    }
-    .char2{
-        position: absolute;
-        width: 45%;
-        top: 70%;
-        left: 70%;
-        transform: translateX(-50%);
-        pointer-events: none;
-    }
 
-    /*真ん中*/
-    .center{
-        width: 65vw;
-    }
-    article{
-        background-size: 65vw 70vh;
-    }
-    .light{
-        width: 44vw;
-    }
-    .article-img1{
-        width: 50vw;
-    }
-    .top{
-        top: 27%;
-        gap: 3vw;
-    }
-    .article-img2{
-        width: 25vw;
-        margin-top: 15vh;
-    }
-    .article-img3{
-        width: 33vw;
-    }
-    .top-textback{
-        width: 45vw;
-    }
-    .textback{
-        margin-top: 30%;
-    }
-    .article-img4{
-        margin-top: 40%;
-    }
-    .nohara{
-        width: 100%;
-    }
-    .pro-img{
-        background-position: 2vw 2vw;
-    }
+
+
+
+
+/* レスポンシブデザイン */
+@media (max-width: 1150px) {
+  
 }
-/*スマホ*/
 @media (max-width: 768px) {
-    .left-area {
-        display: none;
-    }
-    body {
-        justify-content: center;
-    }
-    .global-oval{
-        display: none;
-    }
-    .center{
-        width: 100vw;
-    }
-    article{
-        width: 100vw;
-        background-size: 100vw 80vh;
-    }
-    .light{
-        width: 50vw;
-    }
-    .article-img1{
-        width: 90vw;
-    }
-    .top{
-        top: 26%;
-        gap: 2vw;
-    }
-    .article-img2{
-        width: 38vw;
-        margin-top: 23vh;
-    }
-    .article-img3{
-        width: 53vw;
-    }
-    .top-textback{
-        width: 85vw;
-    }
-    .textback{
-        margin-top: 20vh;
-    }
-    
-    .nohara{
-        width: 100%;
-    }
-    .pro-img{
-        background-position: 3vw 3vw;
-    }
+  
 }
+
