@@ -531,6 +531,7 @@ article {
 main p, main h3, main h1{
     color: #4F3636;
     text-align: center;
+    line-height: 2;
 }
 .main-title{
     padding: 10% 3%;
@@ -676,17 +677,18 @@ main h3 {
     position: relative;
     margin: 20% 0;
     height: 155vh;
+    overflow: hidden;
 }
 .bg-under{
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -2%;
+    width: 102%;
     z-index: -1;
 }
 .yokunarukun{
     position: absolute;
-    top: 15%;
+    top: 18%;
     left: 10%;
     z-index: 1;
     width: 80%;
