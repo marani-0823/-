@@ -684,16 +684,19 @@ main h3 {
 .about-yokunaru{
     position: relative;
     margin: 20% 0;
-    height: 155vh;
+    height: 180vh;
     overflow: hidden;
 }
+
 .bg-under{
     position: absolute;
     top: 0;
     left: -2%;
     width: 102%;
     z-index: -1;
+    
 }
+
 .yokunarukun{
     position: absolute;
     top: 18%;
