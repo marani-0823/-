@@ -612,6 +612,7 @@ main h3 {
     width: min(80%, 420px);
     min-width: 420px;
     margin: 0 auto 15%;
+    padding-bottom: 140%;
 }
 .zemikanban {
     position: relative;
