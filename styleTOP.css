@@ -677,6 +677,12 @@ main h3 {
 /*斎藤ゼミここまで*/
 
 /*杉澤ゼミの設定*/
+.sugisawa {
+    position: relative;
+    width: min(80%, 420px);
+    min-width: 420px;
+    margin: 0 auto 15%;
+}
 
 
 /*杉澤ゼミここまで*/
