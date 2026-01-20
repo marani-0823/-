@@ -686,8 +686,13 @@ main h3 {
 .about-yokunaru{
     position: relative;
     margin: 20% 0;
-    height: 180vh;
-    overflow: hidden;
+    height: 155vh;
+}
+.bg-under-div{
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
 }
 
 .bg-under{
