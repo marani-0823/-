@@ -683,6 +683,10 @@ main h3 {
     min-width: 420px;
     margin: 0 auto 15%;
 }
+.kanban-sugisawa-wrap {
+    position: relative;
+    width: 100%;
+}
 .zemi-name-sugisawa {
     position: absolute;
     top: 19%;
@@ -722,6 +726,39 @@ main h3 {
 }
 
 /*杉澤ゼミここまで*/
+
+
+/*参加メンバー*/
+.member {
+    position: relative;
+    width: min(80%, 420px);
+    min-width: 420px;
+    margin: 0 auto 15%;
+}
+.kanban-member-wrap {
+    position: relative;
+    width: 100%;
+}
+.member-kanban {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    z-index: 0;
+}
+.zemi-member {
+    position: absolute;
+    top: 19%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffff;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/*参加メンバーここまで*/
 
 /*よくなるくん*/
 .about-yokunaru{
