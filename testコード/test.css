@@ -731,7 +731,7 @@ main h3 {
 /*参加メンバー*/
 .member {
     position: relative;
-    width: min(100%, 700px);
+    width: min(80%, 420px);
     min-width: 420px;
     margin: 0 auto 15%;
 }
@@ -749,7 +749,7 @@ main h3 {
 }
 .zemi-member {
     position: absolute;
-    top: 10%;
+    top: 19%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 24px;
@@ -760,30 +760,27 @@ main h3 {
 }
 .member-icons {
     position: absolute;
-    top: 15%;
-    left: 54%;
+    top: 10%;
+    left: 50%;
     transform: translateX(-50%);
     
     display: grid;
     grid-template-columns: repeat(3,1fr);   /*一列三つ*/
-    gap: 18px 12px;
+    gap: 16px 12px;
     width: 80%;
     z-index: 2;
 }
 .member-item {
-    width: 80px;
+    width: 64px;
     text-align: center;
 }
 .member-item img {
     display: block;
-    width: 90%;
-    margin-bottom: 5%;
+    width: 100%;
 }
 .member-name {
-    font-size: 16px;
+    font-size: 12px;
     margin-top: 4px;
-    color: #ffff;
-    white-space: nowrap;
 }
 /*参加メンバーここまで*/
 
