@@ -135,7 +135,7 @@ img{
     position: fixed;
     left: 50%;
     bottom: -33vh;
-    width: 120vw;
+    width: 120%;
     height: 70vh;
     background: #61b0a4;
     border-radius: 50%;
@@ -757,6 +757,7 @@ main h3 {
     color: #ffff;
     z-index: 2;
     pointer-events: none;
+    white-space: nowrap;
 }
 .member-icons {
     position: absolute;
@@ -771,6 +772,9 @@ main h3 {
     z-index: 2;
 }
 .member-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 80px;
     text-align: center;
 }
@@ -1035,11 +1039,11 @@ footer{
         display: none;
     }
     .center{
-        width: 100vw;
+        width: 100%;
     }
     article{
-        width: 100vw;
-        background-size: 100vw 80vh;
+        width: 100%;
+        background-size: 100% 80vh;
     }
     .light{
         width: 50vw;
@@ -1071,6 +1075,9 @@ footer{
     .pro-img{
         background-position: 3vw 3vw;
     }
+    .img07 img {
+        width: 80%;
+    }
 
     /*スマホ版のゼミ紹介*/
     .zemikanban {
@@ -1083,5 +1090,51 @@ footer{
     .zemi-text-hazime, .zemi-text-sugisawa {
         width: 48%;
         font-size: 10px;
+    }
+    .zemikanban {
+        width: 350px;
+    }
+    .zemi-text-hazime p,.zemi-text-sugisawa p {
+        font-size: 15px;
+    }
+    .zemi-title {
+        margin-top: 15vh;
+        font-size: 30px;
+    }
+    .zemi-logo-hazime,.zemi-logo-sugisawa {
+        width: 70%;
+        margin-bottom: none;
+    }
+    .member,.saitozemi,.sugisawa {
+        min-width: unset;
+        width: 100%;
+    }
+
+    /*スマホ版の参加メンバー*/
+    .kanban03 {
+        width: 320px;
+        max-width: none;
+    }
+    .member-icons {
+        width: 260px;
+        gap: 12px;
+        left: 50%;
+    }
+    .member-icons img {
+        width: 50px;
+        height: 50px;
+    }
+    .member-name {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    /*よくなる君の設定*/
+    .about-yokunaru {
+        height: 100vh;  /*xとよくなる君の間を調整*/
+    }
+    /*xの設定*/
+    .kousin-chu {
+        padding: 0;
     }
 }

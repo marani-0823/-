@@ -135,7 +135,7 @@ img{
     position: fixed;
     left: 50%;
     bottom: -33vh;
-    width: 120vw;
+    width: 120%;
     height: 70vh;
     background: #61b0a4;
     border-radius: 50%;
@@ -432,7 +432,7 @@ img{
 .center-block {
     position: relative;
     min-height: 120vh;
-    overflow: hidden;
+    overflow: visible;
     font-size: 48px;
     font-weight: bold;
     color: #333;
@@ -731,7 +731,7 @@ main h3 {
 /*参加メンバー*/
 .member {
     position: relative;
-    width: min(80%, 420px);
+    width: min(100%, 700px);
     min-width: 420px;
     margin: 0 auto 15%;
 }
@@ -749,7 +749,7 @@ main h3 {
 }
 .zemi-member {
     position: absolute;
-    top: 19%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 24px;
@@ -757,30 +757,37 @@ main h3 {
     color: #ffff;
     z-index: 2;
     pointer-events: none;
+    white-space: nowrap;
 }
 .member-icons {
     position: absolute;
-    top: 10%;
-    left: 50%;
+    top: 15%;
+    left: 54%;
     transform: translateX(-50%);
     
     display: grid;
     grid-template-columns: repeat(3,1fr);   /*一列三つ*/
-    gap: 16px 12px;
+    gap: 18px 12px;
     width: 80%;
     z-index: 2;
 }
 .member-item {
-    width: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
     text-align: center;
 }
 .member-item img {
     display: block;
-    width: 100%;
+    width: 90%;
+    margin-bottom: 5%;
 }
 .member-name {
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 4px;
+    color: #ffff;
+    white-space: nowrap;
 }
 /*参加メンバーここまで*/
 
@@ -1032,11 +1039,11 @@ footer{
         display: none;
     }
     .center{
-        width: 100vw;
+        width: 100%;
     }
     article{
-        width: 100vw;
-        background-size: 100vw 80vh;
+        width: 100%;
+        background-size: 100% 80vh;
     }
     .light{
         width: 50vw;
@@ -1080,5 +1087,42 @@ footer{
     .zemi-text-hazime, .zemi-text-sugisawa {
         width: 48%;
         font-size: 10px;
+    }
+    .zemikanban {
+        width: 350px;
+    }
+    .zemi-text-hazime p,.zemi-text-sugisawa p {
+        font-size: 15px;
+    }
+    .zemi-title {
+        margin-top: 15vh;
+        font-size: 30px;
+    }
+    .zemi-logo-hazime,.zemi-logo-sugisawa {
+        width: 70%;
+        margin-bottom: none;
+    }
+    .member,.saitozemi,.sugisawa {
+        min-width: unset;
+        width: 100%;
+    }
+
+    /*スマホ版の参加メンバー*/
+    .kanban03 {
+        width: 320px;
+        max-width: none;
+    }
+    .member-icons {
+        width: 260px;
+        gap: 12px;
+        left: 50%;
+    }
+    .member-icons img {
+        width: 50px;
+        height: 50px;
+    }
+    .member-name {
+        font-size: 14px;
+        white-space: nowrap;
     }
 }
