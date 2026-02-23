@@ -636,7 +636,8 @@ main h3 {
     top: 23%;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 300px;
+    max-width: 300px;
     z-index: 1;
     pointer-events: none;
 }
@@ -645,7 +646,7 @@ main h3 {
     top: 45%;
     left: 50%;
     transform: translateX(-50%);
-    width: 78%;
+    width: 300px;
     font-size: 17px;
     line-height: 2.0;
     color: #ffff;
@@ -703,7 +704,8 @@ main h3 {
     top: 23%;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 300px;
+    max-width: 300px;
     z-index: 1;
     pointer-events: none;
 }
@@ -712,7 +714,7 @@ main h3 {
     top: 45%;
     left: 50%;
     transform: translateX(-50%);
-    width: 78%;
+    width: 300px;
     font-size: 17px;
     line-height: 2.0;
     color: #ffff;
