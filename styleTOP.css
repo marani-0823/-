@@ -900,14 +900,23 @@ footer{
 
     margin: -3.8vw 0 -1px;
 }
+.mail ,.oka-dodai small{
+    font-size: 1vw;
+}
 @media (max-width: 1150px) {
     .oka-yokunaru{
         margin: -6.5vw 0 -1px;
+    }
+    .mail ,.oka-dodai small{
+    font-size: 3vw;
     }
 }
 @media (max-width: 768px) {
     .oka-yokunaru{
         margin: -10vw 0 -1px;
+    }
+    .mail ,.oka-dodai small{
+    font-size: 3vw;
     }
 }
 .html-2025{
@@ -933,10 +942,6 @@ footer{
 
     background-color: #F5A200;
     padding: 3vw 0 2vw;
-}
-
-.mail ,.oka-dodai small{
-    font-size: 1vw;
 }
 /*フッターここまで*/
 
