@@ -910,6 +910,20 @@ footer{
         margin: -10vw 0 -1px;
     }
 }
+.html-2025{
+    text-align: initial;
+    background-color: #006B5C;
+    color: #FFF;
+
+    width: fit-content;
+
+    margin: 2vw auto;
+    padding: 1.5vw 2vw;
+
+    border-radius: 3vw;
+    text-decoration: none;
+}
+
 
 .oka-dodai{
     display: flex;
@@ -918,11 +932,11 @@ footer{
     text-align: center;
 
     background-color: #F5A200;
-    padding: 3vw 0 5vw;
+    padding: 3vw 0 2vw;
 }
 
 .mail ,.oka-dodai small{
-    font-size: 2vw;
+    font-size: 1vw;
 }
 /*フッターここまで*/
 
